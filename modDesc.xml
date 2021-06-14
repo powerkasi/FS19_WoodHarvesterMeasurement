@@ -227,7 +227,7 @@ Kompatibel mit folgenden Mods:
 		</text>
 		<text name="HUD_UNKNOWN_SPECIE">
 			<en>SET TREE SPECIE!</en>
-			<de>BAUMART EINSTELLEN!</de>
+			<de>BAUMART!</de>
 		</text>
 		<text name="HUD_LOG">
 			<en>Log</en>

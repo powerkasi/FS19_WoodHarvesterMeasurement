@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>
+    <Presets>
+        <Preset name="colorGiantYellow" value="0.9910 0.3865 0.0100 1"/>
+        <Preset name="debugColorRed" value="1.0 0.0 0.0 0.2"/>>
+        <Preset name="colorDisabled" value="0.4 0.4 0.4 1"/>
+    </Presets>
+
+    <Profile name="basicTextInput" extends="textInput">
+        <Value name="margin" value="30px 28px 49px 16px"/>
+        <Value name="maxCharacters" value="4"/>
+    </Profile>
+
+    <Profile name="multiTextOptionTitleHarvester" extends="multiTextOptionTitle">
+        <Value name="size" value="300px 50px"/>
+        <Value name="textAlignment" value="right"/>
+        <Value name="textVerticalAlignment" value="bottom"/>
+    </Profile>
+
+    <Profile name="multiTextOptionTitleStandStats" extends="multiTextOptionTitle">
+        <Value name="margin" value="30px 28px 49px 16px"/>
+        <Value name="size" value="206px 30px"/>
+        <Value name="textAlignment" value="right"/>
+    </Profile>
+
+    <Profile name="multiTextOptionTitleTotal" extends="multiTextOptionTitle">
+        <Value name="margin" value="30px 28px 49px 16px"/>
+        <Value name="frameBottomColor" value="$preset_colorGiantYellow"/>
+        <Value name="frameThickness" value="0px 0px 0px 3px"/>
+        <Value name="size" value="206px 30px"/>
+        <Value name="textAlignment" value="right"/>
+        <Value name="hasFrame" value="true"/>
+    </Profile>
+
+    <Profile name="basicText" extends="textDefault">
+        <!-- string [optional] Pixel margin around outer border of element 
+             to leave free when layouting this element (e.g. in BoxLayout) 
+             in reference resolution, defaults to {0, 0, 0, 0}. 
+             Format: "[left]px [top]px [right]px [bottom]px", 
+             e.g. margin="4px 10px 6px 10px" -->
+        <Value name="margin" value="30px 28px 49px 16px"/>
+        <Value name="size" value="321px 18px"/>
+        <Value name="textAlignment" value="center"/>
+    </Profile>
+
+    <Profile name="basicTextHarvesterInfo" extends="basicText">
+        <Value name="size" value="300px 48px"/>
+        <Value name="textSize" value="18px"/>
+        <Value name="textAlignment" value="right"/>
+    </Profile>
+
+    <Profile name="basicTextStandStats" extends="basicText">
+        <Value name="margin" value="30px 28px 49px 12px"/>
+        <Value name="size" value="206px 12px"/>
+        <Value name="textAlignment" value="right"/>
+        <Value name="textSize" value="12px"/>
+    </Profile>
+
+    <Profile name="basicMultiTextOption" extends="multiTextOption">
+        <Value name="margin" value="30px 28px 49px 16px"/>
+    </Profile>
+
+    <Profile name="emptySlot" extends="basicMultiTextOption">
+    </Profile>
+
+    <Profile name="sectionHeaderText" extends="textDefault">
+        <Value name="margin" value="0px 20px 0px 0px"/>
+        <Value name="screenAlign" value="middleCenter"/>
+        <Value name="positionOrigin" value="middleCenter"/>
+        <Value name="textSize" value="24px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textUpperCase" value="true"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="textDisabledColor" value="$preset_colorDisabled"/>
+        <Value name="textWrapWidth" value="400px"/>
+        <Value name="textMaxNumLines" value="2"/>
+    </Profile>
+
+    <Profile name="debug" extends="uiElementContainerFullScreenSpanning">
+        <Value name="frameTopColor" value="$preset_debugColorRed"/>
+        <Value name="frameLeftColor" value="$preset_debugColorRed"/>
+        <Value name="frameBottomColor" value="$preset_debugColorRed"/>
+        <Value name="frameRightColor" value="$preset_debugColorRed"/>
+        <Value name="frameThickness" value="10px 10px 10px 10px"/>
+        <Value name="hasFrame" value="true"/>
+    </Profile>
+</GUIProfiles>

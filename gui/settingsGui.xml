@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+	<GuiElement type="bitmap" profile="uiFullInGameBackground"/>
+
+	<GuiElement type="empty" size="1650px 1080px" screenAlign="middleCenter" positionOrigin="middleCenter">
+		<GuiElement type="empty" profile="ingameMenuFrameHeaderPanel" position="0px -60px">
+			<GuiElement type="bitmap" profile="ingameMenuGeneralSettingsHeaderIcon" position="0px 0px"/>
+			<GuiElement type="text" profile="ingameMenuFrameHeaderText" position="80px 0px" onCreate="onCreateTranslatedText" text="GUI_HEADER" />
+		</GuiElement>	
+		
+		<GuiElement type="empty" profile="ingameMenuSettingsBox" position="0px -150px" size="1650px 800px">
+
+			<!-- GLOBAL SETTINGS -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="50px -20px" size="400px 800px">
+				<GuiElement type="text" profile="sectionHeaderText" size="400px 24px" onCreate="onCreateTranslatedText" text="GUI_GLOBAL_TITLE" />
+
+				<GuiElement name="cutLengthMin" type="textInput" profile="basicTextInput" onCreate="onCreateSpecTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_CUT_LENGTH_MIN"/>
+				</GuiElement>
+				<GuiElement name="cutLengthMax" type="textInput" profile="basicTextInput" onCreate="onCreateSpecTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_CUT_LENGTH_MAX"/>
+				</GuiElement>
+				<GuiElement name="cutLengthStep" type="textInput" profile="basicTextInput" onCreate="onCreateSpecTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_CUT_LENGTH_STEP"/>
+				</GuiElement>
+			</GuiElement>
+			
+			<!-- HARVESTER SPECIFIC SETTINGS -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="450px -20px" size="400px 800px">
+				<GuiElement type="text" profile="sectionHeaderText" size="400px 24px" onCreate="onCreateTranslatedText" text="GUI_MOD_SETTINGS_TITLE" />
+
+				<GuiElement name="radiusThresholds.pineLogMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_PINE_LOG_MIN_DIAMETER" />
+				</GuiElement>
+				<GuiElement name="radiusThresholds.pinePulpwoodMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_PINE_PULPWOOD_MIN_DIAMETER"/>
+				</GuiElement>
+				<GuiElement name="radiusThresholds.spruceLogMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_SPRUCE_LOG_MIN_DIAMETER"/>
+				</GuiElement>
+				<GuiElement name="radiusThresholds.sprucePulpwoodMinRadius" type="textInput" profile="basicTextInput" onCreate="onCreateTextInput">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitle" text="GUI_SPRUCE_PULPWOOD_MIN_DIAMETER"/>
+				</GuiElement>
+				<GuiElement name="hudConfigs.position" type="multiTextOption" profile="multiTextOptionSettings" onCreate="onCreateMultiTextOption" toolTipElementId="ingameMenuHelpBoxText" toolTipText="">
+					<GuiElement type="button" profile="multiTextOptionSettingsLeft" />
+					<GuiElement type="button" profile="multiTextOptionSettingsRight" />
+					<GuiElement type="text" profile="multiTextOptionSettingsText" />
+					<GuiElement type="text" profile="multiTextOptionSettingsTitle" onCreate="onCreateTranslatedText" text="GUI_VEHICLE_HUD_POSITION" />
+					<GuiElement type="bitmap" profile="multiTextOptionSettingsBg" />
+				</GuiElement>	
+			</GuiElement>		
+
+			<!-- HARVESTTER INFO -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="850px -20px" size="400px 800px">
+				<GuiElement name="modTotalStatsText" type="text" profile="sectionHeaderText" size="400px 24px" onCreate="onCreateTranslatedText" text="GUI_STATS_TITLE_TOTAL" />
+				<GuiElement name="idNameModel" type="text" profile="basicTextHarvesterInfo" onCreate="onCreateCustomText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleHarvester" text="GUI_VEHICLE_MODEL"/>
+				</GuiElement>
+				<GuiElement name="cubicMetreTotal" type="text" profile="basicTextHarvesterInfo" onCreate="onCreateText">
+					<GuiElement  type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleHarvester" text="GUI_CUBIC_METRE_TOTAL"/>
+				</GuiElement>
+			</GuiElement>	
+			
+			<!-- STAND STATS -->
+			<GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="1350px -20px" size="250px 800px">
+				<GuiElement name="modStandStatsText" type="text" profile="sectionHeaderText" size="250px 24px" onCreate="onCreateTranslatedText" text="GUI_STATS_TITLE_STAND" />
+
+				<GuiElement name="currentStand.splitCountPineLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_SPLIT_COUNT_PINE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountPinePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_SPLIT_COUNT_PINE_PULPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountSpruceLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_SPLIT_COUNT_SPRUCE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountSprucePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_SPLIT_COUNT_SPRUCE_PULPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountUnknownLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_SPLIT_COUNT_UNKNOWN_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountUnknownPulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_SPLIT_COUNT_UNKNOWN_PULPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.splitCountStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleTotal" text="GUI_SPLIT_COUNT_STAND"/>
+				</GuiElement>
+
+				<GuiElement name="currentStand.cubicMetrePineLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_CUBIC_METRE_PINE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetrePinePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_CUBIC_METRE_PINE_PUPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreSpruceLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_CUBIC_METRE_SPRUCE_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreSprucePulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_CUBIC_METRE_SPRUCE_PUPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreUnknownLogStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_CUBIC_METRE_UNKNOWN_LOG_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreUnknownPulpwoodStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleStandStats" text="GUI_CUBIC_METRE_UNKNOWN_PUPWOOD_STAND"/>
+				</GuiElement>
+				<GuiElement name="currentStand.cubicMetreStand" type="text" profile="basicTextStandStats" onCreate="onCreateText">
+					<GuiElement type="text" onCreate="onCreateTranslatedText" profile="multiTextOptionTitleTotal" text="GUI_CUBIC_METRE_STAND"/>
+				</GuiElement>
+			</GuiElement>	
+						
+		
+			<!-- HELP TEXT -->
+			<GuiElement type="bitmap" name="helpElement" profile="ingameMenuHelpRowBg" position="80px 50px" id="ingameMenuHelpBox" visible="false" onCreate="onCreateHelpText">
+				<GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
+				<GuiElement type="text" name="helpText" profile="ingameMenuHelpRowText" id="ingameMenuHelpBoxText" text="" onCreate="onCreateHelpText" onTextChanged="onHelpTextChanged"/>
+			</GuiElement>
+		</GuiElement>
+		
+		<!-- BUTTONS -->
+		<GuiElement type="flowLayout" profile="buttonBoxDocked" screenAlign="bottomLeft" positionOrigin="bottomLeft" position="0px 67px" id="buttonsPC">
+			<GuiElement type="button" profile="buttonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+			<GuiElement type="button" profile="buttonOK" text="$l10n_button_save" onClick="onClickSave" />
+			<GuiElement type="button" profile="buttonCancel" text="GUI_UNDO" onCreate="onCreateTranslatedText" onClick="onClickUndoButton" />
+			<GuiElement type="button" profile="buttonCancel" text="GUI_RESET_TO_DEFAULT" onCreate="onCreateTranslatedText" onClick="onClickResetDefaultButton" />
+			<GuiElement type="button" profile="buttonCancel" text="GUI_RESET_STAND" onCreate="onCreateTranslatedText" onClick="onClickResetStandStats" />
+		</GuiElement>
+	</GuiElement>
+</GUI>

@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="53">
+	<author>powerkasi</author>
+    
+	<title>
+		<en>Wood Harvester Measurement</en>
+    </title>
+    
+	<description>
+        <en>
+<![CDATA[
+Wood harvester addon to measure count and volume of cutted splits. 
+There is two type of splits, log and pulpwood.
+Threshold values for pine and spruce logs/pulpwoods can be changed from menu.
+
+Default keys:
+- < = Set tree specie to pine
+- z = Set tree specie to spruce
+- Alt + m = Open settings menu
+
+Compatible with following mods:
+- Real Wood Harvester
+- Manual Cutting for Wood Harvester
+]]>
+		</en>
+		<de>
+<![CDATA[
+Holzernter-Add-On zum Messen der Anzahl und des Volumens der geschnittenen Spalten.
+Es gibt zwei Arten von Spaltholz, Stammholz und Sperrholz.
+Schwellenwerte für Kiefern- und Fichtenstämme/Zellholz können über das Menü geändert werden.
+
+Standardschlüssel:
+- < = Baumart auf Kiefer setzen
+- z = Baumart auf Fichte setzen
+- Alt + m = Einstellungsmenü öffnen
+
+Kompatibel mit folgenden Mods:
+- Echtholz-Erntemaschine
+- Manuelles Schneiden für Holzerntemaschinen
+]]>
+		</de>
+ 	</description>
+	
+	<multiplayer supported="true"/>   
+	<iconFilename>icon.dds</iconFilename>
+	<version>1.0.0.0</version>
+	
+	<extraSourceFiles>
+		<sourceFile filename="Register.lua" />
+	</extraSourceFiles>
+
+		<l10n>
+		<!-- Action Translations -->
+		<text name="input_OPEN_SETTINGS">
+			<en>Wood Harvester Measurement: Menu</en>
+			<de>Wood Harvester Measurement: Menü</de>
+		</text>
+        <text name="input_SET_TREE_SPECIE_TO_PINE">
+			<en>Wood Harvester Measurement: Tree specie to pine</en>
+			<de>Wood Harvester Measurement: Baumart auf Kiefer stellen</de>
+		</text>
+        <text name="input_SET_TREE_SPECIE_TO_SPRUCE">
+			<en>Wood Harvester Measurement: Tree specie to spruce</en>
+			<de>Wood Harvester Measurement: Baumart auf Fichte stellen</de>
+		</text>
+
+        <!-- GUI Translations -->
+        <text name="GUI_HEADER">
+			<en>Wood Harvester Measurement: Menu</en>
+			<de>Wood Harvester Measurement: Menü</de>
+		</text>
+		<text name="GUI_GLOBAL_TITLE">
+			<en>Global Settings</en>
+			<de>Globale Einstellungen</de>
+		</text>
+
+		 <!-- GUI Global Settings -->
+		<text name="GUI_CUT_LENGTH_MIN">
+			<en>Cut length min (m)</en>
+			<de>Schnittlänge min (m)</de>
+		</text>
+		<text name="GUI_CUT_LENGTH_MAX">
+			<en>Cut length max (m)</en>
+			<de>Schnittlänge max (m)</de>
+		</text>
+		<text name="GUI_CUT_LENGTH_STEP">
+			<en>Cut length step (m)</en>
+			<de>Schnittlängenschritt (m)</de>
+		</text>
+
+		<!-- GUI Mod Specific Settings -->
+		<text name="GUI_MOD_SETTINGS_TITLE">
+			<en>Harvester Settings</en>
+			<de>Harvester-Einstellungen</de>
+		</text>
+		<text name="GUI_PINE_LOG_MIN_DIAMETER">
+			<en>Pine log min diameter (cm)</en>
+			<de>Kiefer-Stammholz min. Ø (cm)</de>
+		</text>
+		<text name="GUI_PINE_PULPWOOD_MIN_DIAMETER">
+			<en>Pine pulpwood min diameter (cm)</en>
+			<de>Kiefer-Industrieholz min. Ø (cm)</de>
+		</text>
+		<text name="GUI_SPRUCE_LOG_MIN_DIAMETER">
+			<en>Spruce log min diameter (cm)</en>
+			<de>Fichte-Stammholz min. Ø (cm)</de>
+		</text>
+		<text name="GUI_SPRUCE_PULPWOOD_MIN_DIAMETER">
+			<en>Spruce pulpwood min diameter (cm)</en>
+			<de>Fichte-Industrieholz min. Ø (cm)</de>
+		</text>
+
+		<!-- GUI Harvester INFO/Settings -->
+		<text name="GUI_STATS_TITLE_TOTAL">
+			<en>Harvester Info</en>
+			<de>Harvester-Info</de>
+		</text>
+		<text name="GUI_VEHICLE_MODEL">
+			<en>Id, name and model</en>
+			<de>ID, Name und Modell</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_TOTAL">
+			<en>Total cubic meters cutted</en>
+			<de>Gesamt Festmeter geschnitten</de>
+		</text>
+		<text name="GUI_VEHICLE_HUD_POSITION">
+			<en>HUD position</en>
+			<de>HUD-Position</de>
+		</text>
+		<text name="GUI_HUD_POSITION_1">
+			<en>Bottom Center</en>
+			<de>Unten in der Mitte</de>
+		</text>
+		<text name="GUI_HUD_POSITION_2">
+			<en>Bottom Right</en>
+			<de>Unten rechts</de>
+		</text>
+		<text name="GUI_HUD_POSITION_TOOLTIP">
+			<en>Choose heads-up display position in screen</en>
+			<de>Wählen Sie die Position des Heads-up-Displays auf dem Bildschirm</de>
+		</text>
+
+		<!-- GUI Stand Stats -->
+		<text name="GUI_STATS_TITLE_STAND">
+			<en>Stand Stats</en>
+			<de>Abteilungsstatistik</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_PINE_LOG_STAND">
+			<en>Pine log split count</en>
+			<de>Anzahl des Kiefern-Stammholz</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_PINE_PULPWOOD_STAND">
+			<en>Pine pulpwood split count</en>
+			<de>Anzahl des Kiefern-Industrieholz</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_SPRUCE_LOG_STAND">
+			<en>Spruce log split count</en>
+			<de>Anzahl des Fichten-Stammholz</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_SPRUCE_PULPWOOD_STAND">
+			<en>Spruce pulpwood split count</en>
+			<de>Anzahl des Fichten-Industrieholz</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_UNKNOWN_LOG_STAND">
+			<en>Unknown log split count</en>
+			<de>Unsortierte Anzahl an Stammholz</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_UNKNOWN_PULPWOOD_STAND">
+			<en>Unknown pulpwood split count</en>
+			<de>Unsortierte Anzahl an Industrieholz</de>
+		</text>
+		<text name="GUI_SPLIT_COUNT_STAND">
+			<en>Total</en>
+			<de>Gesamt</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_PINE_LOG_STAND">
+			<en>Pine log volume</en>
+			<de>FM Kiefern-Stammholz</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_PINE_PUPWOOD_STAND">
+			<en>Pine pulpwood volume</en>
+			<de>FM Kiefern-Industrieholz</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_SPRUCE_LOG_STAND">
+			<en>Spruce log volume</en>
+			<de>FM Fichten-Stammholz</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_SPRUCE_PUPWOOD_STAND">
+			<en>Spruce pulpwood volume</en>
+			<de>FM Fichten-Industrieholz</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_UNKNOWN_LOG_STAND">
+			<en>Unknown log volume</en>
+			<de>FM Unsortiertes-Stammholz</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_UNKNOWN_PUPWOOD_STAND">
+			<en>Unknown pulpwood volume</en>
+			<de>FM Unsortiertes-Industrieholz</de>
+		</text>
+		<text name="GUI_CUBIC_METRE_STAND">
+			<en>Total</en>
+			<de>Gesamt</de>
+		</text>
+
+		<!-- GUI Controls -->
+		<text name="GUI_UNDO">
+			<en>Undo</en>
+			<de>Rückgängig machen</de>
+		</text>
+		<text name="GUI_RESET_TO_DEFAULT">
+			<en>Reset defaults</en>
+			<de>Standard</de>
+		</text>
+		<text name="GUI_RESET_STAND">
+			<en>Reset stand stats</en>
+			<de>Abteilungsstatistik zurücksetzen</de>
+		</text>
+
+		<!-- HUD Translations -->
+		<text name="HUD_PINE">
+			<en>PINE</en>
+			<de>KIEFER</de>
+		</text>
+		<text name="HUD_SPRUCE">
+			<en>SPRUCE</en>
+			<de>FICHTE</de>
+		</text>
+		<text name="HUD_UNKNOWN_SPECIE">
+			<en>SET TREE SPECIE!</en>
+			<de>BAUMART EINSTELLEN!</de>
+		</text>
+		<text name="HUD_LOG">
+			<en>Log</en>
+			<de>Stamm</de>
+		</text>
+		<text name="HUD_PULPWOOD">
+			<en>Pulpwood</en>
+			<de>Industrie</de>
+		</text>
+		<text name="HUD_UNKNOWN_TREE_TYPE">
+			<en>-</en>
+			<de>-</de>
+		</text>
+	</l10n>
+	
+	<actions>
+		<action name="OPEN_SETTINGS" category="VEHICLE" ignoreComboMask="false"/>
+		<action name="SET_TREE_SPECIE_TO_PINE" category="VEHICLE" ignoreComboMask="false"/>
+		<action name="SET_TREE_SPECIE_TO_SPRUCE" category="VEHICLE" ignoreComboMask="false"/>
+	</actions>
+	
+	<inputBinding>
+		<actionBinding action="OPEN_SETTINGS">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" />
+		</actionBinding>
+		<actionBinding action="SET_TREE_SPECIE_TO_PINE">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_less"/>
+		</actionBinding>
+		<actionBinding action="SET_TREE_SPECIE_TO_SPRUCE">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_z"/>
+		</actionBinding>
+	</inputBinding>
+	
+</modDesc>

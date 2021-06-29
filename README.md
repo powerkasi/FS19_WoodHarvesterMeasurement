@@ -1,12 +1,12 @@
 # Wood Harvester Measurement Mod
-<i>version 1.0.0.0</i>
+<i>version 1.0.0.1</i>
 
 Wood harvester addon to measure volume and count of cutted splits. There is two type of splits, log and pulpwood.
 Threshold values for pine and spruce logs/pulpwoods can be changed from menu.
 
 Default keys:
-- < = Set tree specie to pine
-- z = Set tree specie to spruce
+- , = Set tree specie to pine
+- . = Set tree specie to spruce
 - Alt + m = Open settings menu
 
 Compatible with following mods:

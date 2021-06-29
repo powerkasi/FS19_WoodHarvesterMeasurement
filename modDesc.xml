@@ -14,13 +14,20 @@ There is two type of splits, log and pulpwood.
 Threshold values for pine and spruce logs/pulpwoods can be changed from menu.
 
 Default keys:
-- < = Set tree specie to pine
-- z = Set tree specie to spruce
+- , = Set tree specie to pine
+- . = Set tree specie to spruce
 - Alt + m = Open settings menu
 
 Compatible with following mods:
 - Real Wood Harvester
 - Manual Cutting for Wood Harvester
+
+Use following page to post bug reports:
+https://github.com/powerkasi/FS19_WoodHarvesterMeasurement/issues
+
+Version 1.0.0.1:
+- Change default keys
+- Change translation for tree specie to tree type
 ]]>
 		</en>
 		<de>
@@ -30,20 +37,27 @@ Es gibt zwei Arten von Spaltholz, Stammholz und Sperrholz.
 Schwellenwerte für Kiefern- und Fichtenstämme/Zellholz können über das Menü geändert werden.
 
 Standardschlüssel:
-- < = Baumart auf Kiefer setzen
-- z = Baumart auf Fichte setzen
+- , = Baumart auf Kiefer setzen
+- . = Baumart auf Fichte setzen
 - Alt + m = Einstellungsmenü öffnen
 
 Kompatibel mit folgenden Mods:
 - Echtholz-Erntemaschine
 - Manuelles Schneiden für Holzerntemaschinen
+
+Verwenden Sie die folgende Seite, um Fehlerberichte zu veröffentlichen:
+https://github.com/powerkasi/FS19_WoodHarvesterMeasurement/issues
+
+Version 1.0.0.1:
+- Standardschlüssel ändern
+- Übersetzung für Baumart in Baumart ändern
 ]]>
 		</de>
  	</description>
 	
 	<multiplayer supported="true"/>   
 	<iconFilename>icon.dds</iconFilename>
-	<version>1.0.0.0</version>
+	<version>1.0.0.1</version>
 	
 	<extraSourceFiles>
 		<sourceFile filename="Register.lua" />
@@ -56,11 +70,11 @@ Kompatibel mit folgenden Mods:
 			<de>Wood Harvester Measurement: Menü</de>
 		</text>
         <text name="input_SET_TREE_SPECIE_TO_PINE">
-			<en>Wood Harvester Measurement: Tree specie to pine</en>
+			<en>Wood Harvester Measurement: Tree type to pine</en>
 			<de>Wood Harvester Measurement: Baumart auf Kiefer stellen</de>
 		</text>
         <text name="input_SET_TREE_SPECIE_TO_SPRUCE">
-			<en>Wood Harvester Measurement: Tree specie to spruce</en>
+			<en>Wood Harvester Measurement: Tree type to spruce</en>
 			<de>Wood Harvester Measurement: Baumart auf Fichte stellen</de>
 		</text>
 
@@ -226,7 +240,7 @@ Kompatibel mit folgenden Mods:
 			<de>FICHTE</de>
 		</text>
 		<text name="HUD_UNKNOWN_SPECIE">
-			<en>SET TREE SPECIE!</en>
+			<en>SET TREE TYPE!</en>
 			<de>BAUMART!</de>
 		</text>
 		<text name="HUD_LOG">
@@ -254,10 +268,10 @@ Kompatibel mit folgenden Mods:
 			<binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_m" />
 		</actionBinding>
 		<actionBinding action="SET_TREE_SPECIE_TO_PINE">
-			<binding device="KB_MOUSE_DEFAULT" input="KEY_less"/>
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_comma"/>
 		</actionBinding>
 		<actionBinding action="SET_TREE_SPECIE_TO_SPRUCE">
-			<binding device="KB_MOUSE_DEFAULT" input="KEY_z"/>
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_period"/>
 		</actionBinding>
 	</inputBinding>
 	
